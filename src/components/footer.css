@@ -1,0 +1,121 @@
+.footer-div {
+    height: 80vh;
+    background-image: url('../images/footer.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+
+}
+.cover{
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-box{
+    height: 550px;
+    width: 800px;
+    border: 3px solid black;
+    border-radius: 25px ;
+    display: grid;
+    grid-template-areas: 'contact emaiil';
+    grid-template-columns: 400px 400px;
+}
+
+.contact-info-div{
+    grid-area: 'contact';
+    background-color: #ddaaca;
+    border-right: 2px solid black ;
+    border-radius: 24px 0 0 24px;
+    display: block;
+}
+.contact-title{
+    font-size: 32px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    padding-top: 100px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    padding-bottom: 50px;
+}
+.social-media{
+    text-decoration: none;
+    padding-left: 20px;
+    color: white;
+}
+.social-media span{
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'Nunito', sans-serif;
+}
+i{
+    font-size: 25px;
+    padding-left: 40px;
+    color: white;
+}
+.contact-inf{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    padding-left: 20px;
+    padding-top: 60px;
+}
+
+.email-div{
+    grid-area: 'email';
+    padding-left: 90px;
+    background-color: white;
+    border: 1px solid black;
+    width: 395px;
+    border-radius: 0 24px 24px 0;
+}
+
+.email-title{
+    font-size: 32px;
+    letter-spacing: 1px;
+    padding-top: 100px;
+    font-family: 'Bebas Neue', cursive;
+    padding-bottom: 30px;
+    color: black;
+}
+.label{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+.label2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+.email-div input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ddaaca;
+}
+.email-div textarea{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ddaaca;
+}
+.send-button{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #ddaaca;
+    background-color: white;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+.send-button:hover{
+    background-color: #ddaaca;
+    color: white;
+}
