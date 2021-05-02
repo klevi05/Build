@@ -3,8 +3,6 @@ import './buy.css';
 import gift from '../images/gift.png';
 import product from '../images/bg.jpg';
 import Header from '../header/Header';
-import axios from 'axios';
-
 export default class Buy extends Component{
 
     render(){
