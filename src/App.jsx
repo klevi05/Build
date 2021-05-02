@@ -16,9 +16,9 @@ class App extends Component {
           <Route path='/' exact >
             <Home />
           </Route>
-          <Route path='/about' exact  component={Information} />
-          <Route path='/contact' exact  component={Contact} />
-          <Route path='/buy' exact  component={Buy}/>
+          <Route path='/about' component={Information} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/buy' component={Buy}/>
         </Switch>
       </Router>
    </React.Fragment>
