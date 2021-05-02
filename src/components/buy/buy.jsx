@@ -6,29 +6,7 @@ import Header from '../header/Header';
 import axios from 'axios';
 
 export default class Buy extends Component{
-    constructor(props){
-        super(props)
-        this.state={
-          title: '',
-          description: '',
-          price: ''
-        }
-      };
-      componentDidMount(){
-        axios({
-          method:'GET',
-          url:'http://localhost:5000/user/retrive608af715e72f242067b8741a',
-          headers: {'Content-Type': 'application/json'},
-        }).then(async (respone)=>{
-          if(respone.status === 200){
-            this.setState({ 
-              title: await respone.data.title,
-              description: await respone.data.description,
-              price:  await respone.data.price
-            });
-          }
-        })
-      }
+
     render(){
     return(
         <React.Fragment>
@@ -44,8 +22,8 @@ export default class Buy extends Component{
                                 <img src={product} alt="Just a random prod"/>
                             </div>
                             <div className='suprize-text-area'>
-                                <p>{this.state.description}</p>
-                                <p className="pricing"> Price : {this.state.price / 100 + '$'}</p>
+                                <p>This is a box which has inside natural sea elements.It will come in a beautiful package with the marvelous smell of the sea inside a small box. Everything inside is 100% naturale, even the box itself is all 100% recyclable. Inside the box you will receive 500 grams of beautiful rocks each one selected to be different from the other, a package of sea sand which will give you the sensation of being at the sea side and as a gift from us is included a small package of shells with many different shapes and forms.</p>
+                                <p className="pricing"> Price : 89.99 $ </p>
                                 <button className='suprize-box-button'>Buy Now</button>
                             </div>
                         </div>
