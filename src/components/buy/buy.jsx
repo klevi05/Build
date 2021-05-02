@@ -1,57 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './buy.css';
-import card from '../images/cards.png';
-import Header from '../header/Header'
-import { useHistory } from 'react-router';
+import gift from '../images/gift.png';
+import product from '../images/bg.jpg';
+import Header from '../header/Header';
+import axios from 'axios';
 
-export default function Buy(){
-    const histori = useHistory();
-    function handleSmallBox(){
-        histori.push('/buy/608aec386ff8cc118062b1e2')
-    };
-    function handleMediumBox(){
-        histori.push('/buy/608aedf76ff8cc118062b1e3')
-    };
-    function handleBigBox(){
-        histori.push('/buy/608af715e72f242067b8741a')
-    };
-    
+export default class Buy extends Component{
+    constructor(props){
+        super(props)
+        this.state={
+          title: '',
+          description: '',
+          price: ''
+        }
+      };
+      componentDidMount(){
+        axios({
+          method:'GET',
+          url:'http://localhost:5000/user/retrive'+'608af715e72f242067b8741a',
+          headers: {'Content-Type': 'application/json'},
+        }).then(async (respone)=>{
+          if(respone.status === 200){
+            this.setState({ 
+              title: await respone.data.title,
+              description: await respone.data.description,
+              price:  await respone.data.price
+            });
+          }
+        })
+      }
+    render(){
     return(
         <React.Fragment>
             <div className='box'>
                 <Header home='/' about='/about' contact='/contact' buy='/buy'/>
-            <div id='cards'>
-                <div className='cards'>
-                    <img className='card' src={card} alt="card"/>
-                    <img className='card2' src={card} alt="card"/>
-                </div>
-            <div className='boxes'>
-                <div className='small-box'>
-                <div className='box-contect'>
-                      <h1 className='box-title'>Small box</h1>
-                      <p className='box-description'>This box has inside 200gr of rocs from the sea and some other suprise elements inside from us as a gift!</p>
-                      <button className='box-button' onClick={handleSmallBox}>Buy Now</button>
+                <div className='gift-box'>
+                    <div className='gift-box-text'>
+                        <div className='suprize-box-title'>
+                            <h1>Suprize box, the perfect gift for someone who loves sea and nature</h1>
+                        </div>
+                        <div className='suprize-box-description'>
+                            <div className='suprize-image-area'>
+                                <img src={product} alt="Product image"/>
+                            </div>
+                            <div className='suprize-text-area'>
+                                <p>{this.state.description}</p>
+                                <p className="pricing"> Price : {this.state.price / 100 + '$'}</p>
+                                <button className='suprize-box-button'>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='gift-box-image'>
+                        <img src={gift} alt="The perfect gift"/>
                     </div>
                 </div>
-                <div className='medium-box'>
-                <div className='box-contect'>
-                      <h1 className='box-title-m'>Medium box</h1>
-                      <p className='box-description-m'>This box has inside 400gr of rocs from the sea and some other suprise elements inside from us as a gift!</p>
-                      <br/>
-                      <br/>
-                      <button className='box-button-m' onClick={handleMediumBox}>Buy Now</button>
-                    </div>
-                </div>
-                <div className='big-box'>
-                    <div className='box-contect'>
-                      <h1 className='box-title'>Large box</h1>
-                      <p className='box-description'>This box has inside 600gr of rocs from the sea and some other suprise elements inside from us as a gift!</p>
-                      <button className='box-button' onClick={handleBigBox}>Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            </div>
             </div>
         </React.Fragment>
-    )
+    )}
 }
