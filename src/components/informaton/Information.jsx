@@ -1,11 +1,13 @@
 import React from 'react';
 import './information.css';
+import Header from '../header/Header';
 import aobutImage from '../images/about.jpg';
 
 export default function Information() {
     return(
     <React.Fragment>
         <div id='aboutUs' className='information-div'>
+        <Header home="/" about='/about' footer='/contact' />
             <div className='about'>
                 <div className='informativ-text'>
                 <p>Thank you for visiting our website!</p>

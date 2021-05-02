@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css';
+import Header from '../header/Header';
 import { IoLogoTiktok } from 'react-icons/io5';
 import {IoLogoFacebook} from 'react-icons/io5';
 import {IoLogoInstagram} from 'react-icons/io5';
@@ -8,6 +9,7 @@ export default function Footer(){
     return(
         <React.Fragment>
         <div id='footer' className='footer-div'>
+        <Header home="/" about='/about' footer='/contact' />
             <div className='cover'>
             <div className='contact-box'>
                 <div className='contact-info-div'>
