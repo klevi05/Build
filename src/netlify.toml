@@ -6,4 +6,4 @@ base = "/"
 [[redirects]]
 from = "/*"
 to = "/"
-status = 404
+status = 200
