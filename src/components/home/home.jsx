@@ -1,9 +1,9 @@
 import React from 'react';
 import './home.css';
-import Information from './Information';
-import Buy from "./buy";
-import Header from './Header';
-import Footer from './Footer';
+import Information from '../informaton/Information';
+import Buy from "../buy/buy";
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
 export default function Home() {
     return(
