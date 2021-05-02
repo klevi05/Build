@@ -1,6 +1,7 @@
 import React from 'react';
 import './buy.css';
 import card from '../images/cards.png';
+import Header from '../header/Header'
 import { useHistory } from 'react-router';
 
 export default function Buy(){
@@ -18,6 +19,7 @@ export default function Buy(){
     return(
         <React.Fragment>
             <div className='box'>
+                <Header home='/' about='/about' contact='/contact' buy='/buy'/>
             <div id='cards'>
                 <div className='cards'>
                     <img className='card' src={card} alt="card"/>

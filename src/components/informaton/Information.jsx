@@ -7,7 +7,7 @@ export default function Information() {
     return(
     <React.Fragment>
         <div id='aboutUs' className='information-div'>
-        <Header home="/" about='/about' footer='/contact' />
+        <Header home="/" about='/about' contact='/contact' buy='/buy' />
             <div className='about'>
                 <div className='informativ-text'>
                 <p>Thank you for visiting our website!</p>

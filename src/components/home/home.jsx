@@ -5,7 +5,7 @@ import Header from '../header/Header';
 export default function Home() {
     return(
      <React.Fragment>
-       <Header home="#home" about='/about' footer='/contact' />
+       <Header home="#home" about='/about' contact='/contact'  buy='/buy' />
         <div id='home' className='main-body'>
          <div className='main-content'>
            <p className='context'>All the sea lover's can have now a peace of sea with us!</p>

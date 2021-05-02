@@ -9,7 +9,7 @@ export default function Footer(){
     return(
         <React.Fragment>
         <div id='footer' className='footer-div'>
-        <Header home="/" about='/about' footer='/contact' />
+        <Header home="/" about='/about' contact='/contact' buy='/buy' />
             <div className='cover'>
             <div className='contact-box'>
                 <div className='contact-info-div'>
