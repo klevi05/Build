@@ -41,7 +41,7 @@ export default class Buy extends Component{
                         </div>
                         <div className='suprize-box-description'>
                             <div className='suprize-image-area'>
-                                <img src={product} alt="Product image"/>
+                                <img src={product} alt="Product "/>
                             </div>
                             <div className='suprize-text-area'>
                                 <p>{this.state.description}</p>
