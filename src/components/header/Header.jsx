@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import logo from '../images/logo.png'
+import { Link } from 'react-router-dom';
 function Header({ home, about, footer}){
     return(
     <React.Fragment>
@@ -9,9 +10,9 @@ function Header({ home, about, footer}){
             <img src={logo} alt="logo"/>
         </div>
         <nav className='nav-div'>
-            <li className='list'><a href={home}>Home</a></li>
-            <li className='list'><a href={about}>About Us</a></li>
-            <li className='list'><a href={footer}>Contact</a></li>
+            <li className='list'><Link to={home}> Home </Link> </li>
+            <li className='list'><Link to={about}>About Us</Link></li>
+            <li className='list'><Link to={footer}>Contact</Link></li>
             <li className='list-button'><a className='nav-button'  href="#cards"> Buy Now</a></li>
         </nav>
     </header>
