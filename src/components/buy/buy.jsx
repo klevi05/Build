@@ -17,7 +17,7 @@ export default class Buy extends Component{
       componentDidMount(){
         axios({
           method:'GET',
-          url:'http://localhost:5000/user/retrive/608af715e72f242067b8741a',
+          url:'http://localhost:5000/user/retrive608af715e72f242067b8741a',
           headers: {'Content-Type': 'application/json'},
         }).then(async (respone)=>{
           if(respone.status === 200){
