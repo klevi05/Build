@@ -1,8 +1,8 @@
 .box{
-    height: 100vh;
+    height: 300vh;
 }
 .gift-box{
-    height: 90vh;
+    height: 100vh;
     display: grid;
     grid-template-areas: 'text image';
     grid-template-columns: 50% 50%;
@@ -75,4 +75,96 @@
     background-color: #ddaaca;
     color: white;
     border: 2px solid #ddaaca;
+}
+.shell-box{
+    height: 100vh;
+}
+.shell-box-devider{
+    display: grid;
+    grid-template-areas: 'shell-image shell-text';
+}
+.shell-image{
+    grid-area: 'shell-image';
+}
+.shell-image img{
+    width: 900px;
+    margin-top: 15vh;
+}
+.shell-text{
+    margin-top: 10vh;
+}
+.shell-box-title{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+.shell-box-title h1{
+    font-size: 42px;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
+
+}
+.shell-box-description{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-areas: 'product description';
+    grid-template-columns: 50% 50%;
+    height: 500px;
+}
+.shell-image-area{
+    grid-area: 'product';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shell-image-area img{
+    height: 380px;
+    width: 350px;
+    object-fit: cover;
+}
+.shell-text-area{
+    display: inline-block;
+    line-height: 26px;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px solid #ddaaca;
+
+}
+.shell-box-button{
+    padding: 4px;
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    border: 2px solid #ddaaca;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+.shell-box-button:hover{
+    background-color: #ddaaca;
+    color: white;
+    border: 2px solid #ddaaca;
+}
+.gram{
+    display: flex;
+    margin-top: 10px;
+}
+.grams{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.plus{
+    padding: 4px;
+    font-size: 16px;
+    border: 2px solid #ddaaca;
+    background-color: white;
+}
+.plus:hover{
+    border: 2px solid black;
+    background-color: #ddaaca;
+    color: white;
 }
