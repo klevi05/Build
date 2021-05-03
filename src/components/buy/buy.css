@@ -76,6 +76,8 @@
     color: white;
     border: 2px solid #ddaaca;
 }
+
+
 .shell-box{
     height: 100vh;
 }
@@ -167,4 +169,25 @@
     border: 2px solid black;
     background-color: #ddaaca;
     color: white;
+}
+
+
+.rock-box{
+    height: 100vh;
+}
+.rock-box-devider{
+    display: grid;
+    grid-template-areas: 'rock-text rock-image';
+}
+
+.rock-image{
+    grid-area: 'rock-image';
+}
+.rock-image img{
+    width: 900px;
+    margin-top: 25vh;
+}
+.rock-text{
+    grid-area: 'rock-text';
+    margin-top: 12vh;
 }

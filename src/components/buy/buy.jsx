@@ -3,15 +3,18 @@ import './buy.css';
 import gift from '../images/gift.png';
 import shell from '../images/shell.png';
 import product from '../images/bg.jpg';
+import rock from '../images/rocks.png';
 import backgound from '../images/background.jpg';
 import Header from '../header/Header';
+
 export default class Buy extends Component{
     constructor(props){
         super(props)
         this.state={
             grams: 200,
             shellprice: 2999,
-            rocksprice: 2499
+            rocksprice: 2499,
+            rockGram: 200
         }
     }
     handleIncrement = () =>{
@@ -42,6 +45,36 @@ export default class Buy extends Component{
         this.setState({
             grams: newGram,
             shellprice: newPrice
+        })
+    };
+    handleRockIncrement = () =>{
+        let newPrice = 0;
+        let newGram = 0;
+        if(this.state.rockGram < 1000){
+            newPrice = this.state.rocksprice + 500
+            newGram = this.state.rockGram + 50
+        }else if(this.state.rockGram === 1000){
+            newGram = this.state.rockGram + 0
+            newPrice = this.state.rocksprice + 0
+        }
+        this.setState({
+            rockGram: newGram,
+            rocksprice: newPrice
+        })
+    };
+    handleRockDecrement = () =>{
+        let newPrice = 0;
+        let newGram = 0;
+        if(this.state.rockGram > 200){
+            newPrice = this.state.rocksprice - 500
+            newGram = this.state.rockGram - 50
+        }else if(this.state.rockGram === 200){
+            newGram = this.state.rockGram - 0
+            newPrice = this.state.rocksprice - 0
+        }
+        this.setState({
+            rockGram: newGram,
+            rocksprice: newPrice
         })
     };
     render(){
@@ -93,6 +126,33 @@ export default class Buy extends Component{
                                 <button className='shell-box-button'>Buy Now</button>
                             </div>
                         </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='rock-box'>
+                    <div className='rock-box-devider'>
+                    <div className='rock-text'>
+                        <div className='shell-box-title'>
+                            <h1>We offer you to buy small colorful rocks,perfect for aquariums and for decoration</h1>
+                        </div>
+                        <div className='shell-box-description'>
+                            <div className='shell-image-area'>
+                                <img src={product} alt="Just a random prod"/>
+                            </div>
+                            <div className='shell-text-area'>
+                                <p>This is a box which has inside natural sea elements.It will come in a beautiful package with the marvelous smell of the sea inside a small box. Everything inside is 100% naturale, even the box itself is all 100% recyclable. Inside the box you will receive 500 grams of beautiful rocks each one selected to be different from the other, a package of sea sand which will give you the sensation of being at the sea side and as a gift from us is included a small package of shells with many different shapes and forms.</p>
+                                <div className='gram'>
+                                    <button onClick={this.handleRockIncrement.bind(this)} className='plus'>+</button>
+                                    <p className='grams'>{this.state.rockGram + 'gr'}</p>
+                                    <button onClick={this.handleRockDecrement.bind(this)} className='plus'>-</button>
+                                </div>
+                                <p className="pricing"> Price : {this.state.rocksprice /100 + '$'} </p>
+                                <button className='shell-box-button'>Buy Now</button>
+                            </div>
+                        </div>
+                        </div>
+                        <div className='rock-image'>
+                            <img src={rock} alt="Rocks"/>
                         </div>
                     </div>
                 </div>

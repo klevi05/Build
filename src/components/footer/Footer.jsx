@@ -37,7 +37,7 @@ export default function Footer(){
                     <h2 className='email-title'>Or send us an email</h2>
                     <label className='label'>Email</label>
                     <br/>
-                    <input type="email" placeholder='Email'/>
+                    <input type="email" placeholder='Email' required/>
                     <br/>
                     <label className='label2'>Message</label>
                     <br/>
